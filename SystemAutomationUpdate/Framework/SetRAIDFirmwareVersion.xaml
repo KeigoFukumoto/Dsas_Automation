@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,723</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>654,763</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetRAIDFirmwareVersion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,14 +72,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">180,342</av:Point>
           <av:Size x:Key="ShapeSize">264,60</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">312,402 310,402 310,429.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="264,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -90,25 +89,8 @@
           <InArgument x:TypeArguments="x:String">[NewestFirmwareVersion]</InArgument>
         </Assign.Value>
       </Assign>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">193.5,429.5</av:Point>
-              <av:Size x:Key="ShapeSize">235,61</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <WriteLine DisplayName="1 行を書き込み" sap:VirtualizedContainerService.HintSize="235,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[NewestFirmwareVersion]">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </WriteLine>
-        </FlowStep>
-      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID4">
+    <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">212,125</av:Point>
@@ -208,6 +190,5 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID2</x:Reference>
-    <x:Reference>__ReferenceID3</x:Reference>
   </Flowchart>
 </Activity>

@@ -139,12 +139,12 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID0" Condition="[out_TransactionItem IsNot Nothing]" DisplayName="exist Transaction" sap:VirtualizedContainerService.HintSize="105,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                    <FlowDecision x:Name="__ReferenceID0" Condition="[out_TransactionItem IsNot Nothing]" DisplayName="exist Transaction" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">408,566.5</av:Point>
-                          <av:Size x:Key="ShapeSize">105,87</av:Size>
+                          <av:Size x:Key="ShapeSize">104,87</av:Size>
                           <av:PointCollection x:Key="TrueConnector">408,610 300,610 300,657</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -156,7 +156,7 @@
                               <av:Size x:Key="ShapeSize">200,66</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Set Parameters" sap:VirtualizedContainerService.HintSize="306,252" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Sequence DisplayName="Set Parameters" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -1600,9 +1600,9 @@
     "restore": {
       "projectUniqueName": "SystemAutomationUpdate",
       "projectName": "SystemAutomationUpdate",
-      "projectPath": "C:\\Users\\Admin\\Documents\\UiPath\\SystemAutomationUpdate\\.local",
+      "projectPath": "C:\\Users\\Admin\\Documents\\UiPath\\Dsas_Automation\\SystemAutomationUpdate\\.local",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\UiPath\\SystemAutomationUpdate\\.local"
+      "outputPath": "C:\\Users\\Admin\\Documents\\UiPath\\Dsas_Automation\\SystemAutomationUpdate\\.local"
     },
     "frameworks": {
       "net461": {
