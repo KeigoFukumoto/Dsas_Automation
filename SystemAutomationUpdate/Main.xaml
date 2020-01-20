@@ -63,6 +63,7 @@
       <Variable x:TypeArguments="x:String" Default="ja" Name="Language" />
       <Variable x:TypeArguments="x:String" Name="TransactionType" />
       <Variable x:TypeArguments="ui:Browser" Name="BrowserUI" />
+      <Variable x:TypeArguments="x:String" Name="TransactionProductName" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -85,13 +86,13 @@
           <av:PointCollection x:Key="ConnectorLocation">300,163 300,197</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Init - 初期化" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Init - 初期化" sap:VirtualizedContainerService.HintSize="518,863" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="SystemAutomation取得" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="SystemAutomation取得" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -101,7 +102,7 @@
           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;SystemAutomation.xlsxを選択してください。&quot;]" />
           <ui:SelectFile DisplayName="ファイルを選択" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[SystemAutomation]" />
         </Sequence>
-        <Sequence DisplayName="バックアップ作成" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
+        <Sequence DisplayName="バックアップ作成" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="SystemAutomationFileName" />
             <Variable x:TypeArguments="x:String" Name="isYes" />
@@ -166,7 +167,7 @@
             </If.Then>
           </If>
         </Sequence>
-        <Sequence DisplayName="Language取得" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence DisplayName="Language取得" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="SelectedLanguage" />
           </Sequence.Variables>
@@ -204,14 +205,14 @@
             </If.Else>
           </If>
         </Sequence>
-        <Sequence DisplayName="ブラウザ初期化" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence DisplayName="ブラウザ初期化" sap:VirtualizedContainerService.HintSize="476,453" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーを開く" Hidden="True" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[BrowserUI]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーを開く" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[BrowserUI]" Url="https://www.google.com/">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -219,12 +220,8 @@
                 </ActivityAction.Argument>
               </ActivityAction>
             </ui:OpenBrowser.Body>
-            <ui:OpenBrowser.Url>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
-              </InArgument>
-            </ui:OpenBrowser.Url>
           </ui:OpenBrowser>
+          <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="434,207" sap2010:WorkflowViewState.IdRef="Comment_1" Text="ブラウザ内に以下のサイトが開かれていると、セレクターが混乱してしまうので開かせないようにするか、混乱しないようにする&#xD;&#xA;https://support.hpe.com/hpsc/swd/public/detail?swItemId=MTX_379daccdc547448493fd2c5b17&amp;swEnvOid=4176&#xD;&#xA;https://support.hpe.com/hpsc/swd/public/detail?swItemId=MTX_d44f26458a5c435982ed57b5dc&amp;swEnvOid=4176#tab4" />
         </Sequence>
       </Sequence>
       <FlowStep.Next>
@@ -250,6 +247,7 @@
                 <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionURL">[TransactionURL]</OutArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_ExcelFilePath">[SystemAutomation]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionType">[TransactionType]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionProductName">[TransactionProductName]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
@@ -295,14 +293,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="処理" sap:VirtualizedContainerService.HintSize="242,264" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <Sequence DisplayName="処理" sap:VirtualizedContainerService.HintSize="418,377" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Version取得" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <Sequence DisplayName="Version取得" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -316,13 +314,14 @@
                                       <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionFirmware">[TransactionFirmwareVersion]</OutArgument>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_Type">[TransactionType]</InArgument>
                                       <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserUI">[BrowserUI]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_TransactionProductName">[TransactionProductName]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </Sequence>
-                                <Sequence DisplayName="SystemAutomation更新" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence DisplayName="SystemAutomation更新" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -408,7 +407,7 @@
                       <av:Size x:Key="ShapeSize">200,66</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="End Process - プロセス終了" sap:VirtualizedContainerService.HintSize="376,242" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="End Process - プロセス終了" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -437,7 +436,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:BrowserScope>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;更新が完了しました。&quot;]" />
+                    <ui:MessageBox ChosenButton="{x:Null}" Caption="UiPath" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;更新が完了しました。&quot;]" TopMost="True" />
                   </Sequence>
                 </FlowStep>
               </FlowDecision.False>

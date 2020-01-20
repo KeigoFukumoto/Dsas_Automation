@@ -5,6 +5,7 @@
     <x:Property Name="out_TransactionFirmware" Type="OutArgument(x:String)" />
     <x:Property Name="in_Type" Type="InArgument(x:String)" />
     <x:Property Name="in_BrowserUI" Type="InArgument(ui:Browser)" />
+    <x:Property Name="in_TransactionProductName" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -112,7 +113,7 @@
             <av:Size x:Key="ShapeSize">200,66</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="SetNICFirmwareVersion" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="SetNICFirmwareVersion" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,6 +125,7 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionFirmware">[out_TransactionFirmware]</OutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Language">[in_Language]</InArgument>
               <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserUI">[in_BrowserUI]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_TransactionProductName">[in_TransactionProductName]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
