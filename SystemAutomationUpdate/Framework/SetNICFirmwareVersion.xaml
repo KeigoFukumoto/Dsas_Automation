@@ -102,10 +102,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">176,351</av:Point>
-              <av:Size x:Key="ShapeSize">233,61</av:Size>
+              <av:Size x:Key="ShapeSize">235,61</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <WriteLine DisplayName="1 行を書き込み" sap:VirtualizedContainerService.HintSize="233,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[NewestFirmwareVersion]">
+          <WriteLine DisplayName="1 行を書き込み" sap:VirtualizedContainerService.HintSize="235,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[NewestFirmwareVersion]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -342,7 +342,7 @@
                             <av:Size x:Key="ShapeSize">200,51</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[FirmwareDataTable]" DisplayName="繰り返し (各行)" sap:VirtualizedContainerService.HintSize="758,876" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[FirmwareDataTable]" DisplayName="繰り返し (各行)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
@@ -497,12 +497,12 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetValue>
                     <FlowStep.Next>
-                      <FlowDecision x:Name="__ReferenceID8" Condition="[InStr(TitleText, &quot;Broadcom&quot;) &gt; 0]" DisplayName="broadcom?" sap:VirtualizedContainerService.HintSize="71,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID6}">
+                      <FlowDecision x:Name="__ReferenceID8" Condition="[InStr(TitleText, &quot;Broadcom&quot;) &gt; 0]" DisplayName="broadcom?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID6}">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <av:Point x:Key="ShapeLocation">324.5,216.5</av:Point>
-                            <av:Size x:Key="ShapeSize">71,87</av:Size>
+                            <av:Size x:Key="ShapeSize">70,87</av:Size>
                             <av:PointCollection x:Key="TrueConnector">324.5,260 210,260 210,334.5</av:PointCollection>
                             <av:PointCollection x:Key="FalseConnector">395.5,260 620,260 620,330.5</av:PointCollection>
                           </scg:Dictionary>
@@ -512,11 +512,11 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">488,330.5</av:Point>
-                                <av:Size x:Key="ShapeSize">264,179</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">620,509.5 620,554.5</av:PointCollection>
+                                <av:Size x:Key="ShapeSize">264,177</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">620,507.5 620,554.5</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap2010:Annotation.AnnotationText="(4)としているのは、スペース区切りの4番目が型番となっていることが多いため。&#xA;Ethernet 10Gb 2ポート 530T ネットワークアダプター&#xA;Ethernet 1Gb 4 ポート 366FLR ネットワーク アダプター&#xA;etc.." DisplayName="代入" sap:VirtualizedContainerService.HintSize="264,179" sap2010:WorkflowViewState.IdRef="Assign_16">
+                            <Assign sap2010:Annotation.AnnotationText="(4)としているのは、スペース区切りの4番目が型番となっていることが多いため。&#xA;Ethernet 10Gb 2ポート 530T ネットワークアダプター&#xA;Ethernet 1Gb 4 ポート 366FLR ネットワーク アダプター&#xA;etc.." DisplayName="代入" sap:VirtualizedContainerService.HintSize="264,177" sap2010:WorkflowViewState.IdRef="Assign_16">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[ProductModelNumber]</OutArgument>
                               </Assign.To>
@@ -545,21 +545,6 @@
                   <x:Reference>__ReferenceID12</x:Reference>
                   <x:Reference>__ReferenceID0</x:Reference>
                   <x:Reference>__ReferenceID13</x:Reference>
-                  <FlowStep>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">463,182</av:Point>
-                        <av:Size x:Key="ShapeSize">334,56</av:Size>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="broadcom is nullは不可">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:Comment>
-                  </FlowStep>
                 </Flowchart>
                 <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="831,60" sap2010:WorkflowViewState.IdRef="Assign_22">
                   <Assign.To>
