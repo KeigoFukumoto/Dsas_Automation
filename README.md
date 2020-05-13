@@ -1,11 +1,20 @@
 ﻿# Dsas_Automation
 
+System_Automationシートはパーツの型番をキー値としたデータベースとなっています。
+ウェブスクレイピングで自動更新するスクリプトの作成は庄司さんにお願いしましたが
+色々後々になってしまい統合テストはできていません。
+テストがうまく動作する様であればウェブスクレイピングと合わせて本pythonスクリプトの実行で
+SYstem_Automation.xlsxに保存されたパーツ情報を機器構成シートに転記します。
 
-Dsasの機器構成シートの自動化の為のpythonコードです
-前提としてpip3を含むpython3.x をインストールしてください
+
+
+▼本レポジトリはDsasの機器構成シートの自動化の為のpythonコードです
+実行の前提としてWindows10 PC上で動作を確認したので同様の条件で
+pip3を含むpython3.x をインストールしてください。
+インストールについては下記を参照。
 https://vgkits.org/blog/pip3-windows-howto/
 
-下記のファイルを実行するとSystemAutomation.xlsxの各列から機器構成シートを読み込みSample.xlsxへ転記します
+"write_composition_sheet.py"ファイルを実行するとSystemAutomation.xlsxの各列から機器構成シートを読み込みSample.xlsxへ転記します
 
 実行にはいくつかの必要なライブラリがあります。
 
